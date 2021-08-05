@@ -62,4 +62,4 @@ Run server
 python manage.py runserver
 ```
 
-Check the authentication by brower `http://localhost:8000`
+Check the authentication by brower `http://localhost:8000/admin`
