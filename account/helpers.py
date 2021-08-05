@@ -1,5 +1,6 @@
 # -*- mode: python -*- -*- coding: utf-8 -*-
 from django_cognito.authentication.cognito import constants
+from django_cognito.authentication.cognito.helpers import parse_parameter
 from django_cognito.authentication.cognito.base import (
     CognitoClient, CognitoException)
 
@@ -41,11 +42,3 @@ def initiate_auth_without_secret(username, auth_flow, password=None,
 
     except constants.AWS_EXCEPTIONS as ex:
         raise CognitoException.create_from_exception(ex)
-
-
-def parse_parameter(data, param_mapping, param=None):
-    if param_mapping is not None:
-        if param in param_mapping:
-            return data[param_mapping[param]]
-    else:
-        return data[param]
