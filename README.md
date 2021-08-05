@@ -47,12 +47,12 @@ python manage.py createsuperuser
 Set environment variables
 
 ```
-cp .env.sample env
+cp .env.sample .env
 ```
 
 And customize it
 
-> Unset or set empty for APP_SECRET_KEY for no client secret.
+> Unset or set empty for APP_SECRET_KEY, if you have no client secret.
 
 You can see more detail [here](https://github.com/patriotresearch/django-cognito-redux/).
 
