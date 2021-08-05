@@ -10,9 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import distutils.util
 from pathlib import Path
 
 from dotenv import load_dotenv
+
+
+def boolean(value):
+    try:
+        return bool(distutils.util.strtobool(value))
+    except:
+        return False
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +37,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', os.urandom(24))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = boolean(os.getenv('DEBUG', 'True'))
 
 ALLOWED_HOSTS = []
 if os.getenv('ALLOWED_HOSTS'):
@@ -147,9 +156,9 @@ APP_SECRET_KEY = os.getenv('APP_SECRET_KEY', 'client_secret')
 COGNITO_POOL_ID = os.getenv('COGNITO_POOL_ID', 'pool_id')
 
 # django-cotnito-redux
-USE_CSRF = bool(os.getenv('USE_CSRF', 0))
-HTTP_ONLY_COOKIE = bool(os.getenv('HTTP_ONLY_COOKIE', 0))
-SECURE_COOKIE = bool(os.getenv('SECURE_COOKIE', 0))
+USE_CSRF = boolean(os.getenv('USE_CSRF', 'False'))
+HTTP_ONLY_COOKIE = boolean(os.getenv('HTTP_ONLY_COOKIE', 'False'))
+SECURE_COOKIE = boolean(os.getenv('SECURE_COOKIE', 'False'))
 
-AUTO_CREATE_USER = bool(os.getenv('AUTO_CREATE_USER'))
-ADD_STAFF_ROLE = bool(os.getenv('ADD_STAFF_ROLE'))
+AUTO_CREATE_USER = boolean(os.getenv('AUTO_CREATE_USER', 'True'))
+ADD_STAFF_ROLE = boolean(os.getenv('ADD_STAFF_ROLE', 'False'))

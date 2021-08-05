@@ -14,7 +14,7 @@ This is a simple sample about this.
 
 ## Prerequisites
 
-You has already been created User pool in AWS (need `USER_PASSWORD_AUTH` permission)
+You has already been created User pool in AWS (require `USER_PASSWORD_AUTH` permission)
 
 ## Set up
 
@@ -53,6 +53,7 @@ cp .env.sample .env
 And customize it
 
 > Unset or set empty for APP_SECRET_KEY, if you have no client secret.
+> Set 0 or 1 in boolean variables (DEBUG etc).
 
 You can see more detail [here](https://github.com/patriotresearch/django-cognito-redux/).
 
