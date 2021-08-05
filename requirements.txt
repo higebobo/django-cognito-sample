@@ -1,0 +1,3 @@
+django-cognito-redux==1.4.5
+python-dotenv==0.19.0
+python-jose==3.3.0

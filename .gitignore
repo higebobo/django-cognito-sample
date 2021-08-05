@@ -1,0 +1,8 @@
+*~
+*.bak*
+*.orig
+*.pyc
+.env
+.coverage
+__pychache__
+data.db
