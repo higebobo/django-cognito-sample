@@ -1,4 +1,4 @@
-# AWS Cognito in Django without client secret
+# Using AWS Cognito in Django without client secret
 
 ## Overview
 
