@@ -2,8 +2,8 @@
 
 ## Overview
 
-[django\-cognito\-redux](https://pypi.org/project/django-cognito-redux/) is one of the [Django](https://www.djangoproject.com/) authentication library.  
-It's fine working with Django 3.*.  
+[django\-cognito\-redux](https://pypi.org/project/django-cognito-redux/) is one of the [Django](https://www.djangoproject.com/) authentication libraries.  
+It's fine working with Django 3.x.  
 
 Sharing the same cognito user pool with other web application, for examle [Vue.js](https://vuejs.org/), there is a problem.
 
