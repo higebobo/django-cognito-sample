@@ -64,3 +64,9 @@ python manage.py runserver
 ```
 
 Check the authentication by brower `http://localhost:8000/admin`
+
+This message is not a problem, because common cognito user has no admin permission of anything.
+
+```
+You don’t have permission to view or edit anything.
+```
