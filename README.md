@@ -5,16 +5,16 @@
 [django\-cognito\-redux](https://pypi.org/project/django-cognito-redux/) is one of the [Django](https://www.djangoproject.com/) authentication libraries.  
 It's fine working with Django 3.x.  
 
-Sharing the same cognito user pool with other web application, for examle [Vue.js](https://vuejs.org/), there is a problem.
+But, sharing the same cognito user pool with other web application, for examle [Vue.js](https://vuejs.org/), there is a problem.
 
-Django-cognito-redux is required the client secret key of the cognito application client.  
+Django-cognito-redux required the client secret key of the cognito application client.  
 So, override the original function, can be solved.
 
 This is a simple sample about this.
 
 ## Prerequisites
 
-You has already been created User pool in AWS (require `USER_PASSWORD_AUTH` permission)
+You have already been created User pool in AWS (require `USER_PASSWORD_AUTH` permission)
 
 ## Set up
 
